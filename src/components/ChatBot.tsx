@@ -92,8 +92,18 @@ const ChatBot = () => {
 
       if (error) throw error;
 
-      setMessages(prev => [...prev, { text: data.reply, isUser: false }]);
-      conversation.speak(data.reply);
+      if (data.reply) {
+        setMessages(prev => [...prev, { text: data.reply, isUser: false }]);
+        if (!isMuted) {
+          conversation.setVolume({ volume: 1 });
+          await conversation.startSession({
+            agentId: "multilingual-transport-agent",
+          });
+          if (conversation.status === 'connected') {
+            conversation.onMessage({ type: 'text', text: data.reply });
+          }
+        }
+      }
     } catch (error) {
       console.error('Error:', error);
       toast({
@@ -236,3 +246,4 @@ const ChatBot = () => {
 };
 
 export default ChatBot;
+
