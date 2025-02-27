@@ -1,5 +1,5 @@
 
-import { Train, Road, Truck } from "lucide-react";
+import { Train, HighwaySign, Truck } from "lucide-react";
 import { Logo } from "@/components/Logo";
 import { FeatureCard } from "@/components/FeatureCard";
 
@@ -43,7 +43,7 @@ const Index = () => {
               <FeatureCard
                 title="Highway Maintenance"
                 description="Smart forecasting for road maintenance, optimizing safety and resource allocation."
-                icon={Road}
+                icon={HighwaySign}
                 gradient="linear-gradient(135deg, #2563EB 0%, #3B82F6 100%)"
               />
             </div>
