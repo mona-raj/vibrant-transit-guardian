@@ -42,7 +42,7 @@ const About = () => {
                 <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-sm">
                   <h4 className="text-xl font-semibold mb-3">🚧 Pothole Detection</h4>
                   <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                    <li>Uses <strong>YOLOv8</strong> for real-time pothole identification.</li>
+                    <li>Uses <strong>a custom ML model for real-time pothole identification</strong>.</li>
                     <li>Assesses severity levels (<strong>Low, Medium, High</strong>).</li>
                     <li>Provides maintenance recommendations.</li>
                   </ul>
